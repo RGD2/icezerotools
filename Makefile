@@ -11,18 +11,18 @@ icezprog: icezprog.c
 	gcc -o icezprog -Wall -Os icezprog.c -lwiringPi -lrt -lstdc++
 
 icezero.json: icezero.v memdata.dat defines.vh
-	yosys -p 'synth_ice40 -top top -json icezero.json' icezero.v
+	yowasp-yosys -p 'synth_ice40 -top top -json icezero.json' icezero.v
 
 icezero.asc: icezero.json icezero.pcf
 	#arachne-pnr -d 8k -P tq144:4k -p icezero.pcf -o icezero.asc icezero.blif
-	nextpnr-ice40 --hx8k --package tq144:4k --json icezero.json --pcf icezero.pcf --asc icezero.asc
+	yowasp-nextpnr-ice40 --hx8k --package tq144:4k --json icezero.json --pcf icezero.pcf --asc icezero.asc
 
 icezero.bin: icezero.asc
-	icetime -d hx8k -c 25 icezero.asc
-	icepack icezero.asc icezero.bin
+	#icetime -d hx8k -c 25 icezero.asc
+	yowasp-icepack icezero.asc icezero.bin
 
 memdata.dat: generate.py
-	python3 generate.py
+	python generate.py
 
 defines.vh: memdata.dat
 
