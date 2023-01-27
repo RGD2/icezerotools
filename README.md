@@ -17,6 +17,12 @@ IceZero Getting Started Guide
 **Step 1:** Get the raspbian image with pre-installed FOSS iCE40 tools:  
 http://files.clifford.at/2017-03-02-raspbian-jessie-icotools.zip
 
+- note: This is no longer available, you'll need to get the tools elsewhere
+- nb. can install wiringpi (deprecated dep for the icezprog, which is no longer in apt) using:
+
+	wget https://project-downloads.drogon.net/wiringpi-latest.deb
+	sudo dpkg -i wiringpi-latest.deb
+
 **Step 2:** Unzip the file and write the image on a (min 16 GB) SD card. See this link for instructions:  
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
@@ -31,4 +37,5 @@ IceZero programming tool:
 **Step 5:** Build the example design and program it into the IceZero board:
 
     make prog
+
 
