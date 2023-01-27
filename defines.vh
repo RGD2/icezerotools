@@ -1,0 +1,37 @@
+`define OUTPUT_PINS \
+output gpio_0, \
+output gpio_1, \
+output gpio_2, \
+output gpio_3, \
+output gpio_4, \
+output gpio_5, \
+output gpio_6, \
+output gpio_7, \
+output gpio_8, \
+output gpio_9, \
+output gpio_10, \
+output gpio_11, \
+output gpio_12, \
+output gpio_13, \
+output gpio_14, \
+output gpio_15, \
+output gpio_16, \
+output gpio_17, \
+output gpio_18, \
+output gpio_19, \
+output gpio_20, \
+output gpio_21, \
+output gpio_22, \
+output gpio_23, \
+output gpio_24, \
+output gpio_25, \
+output gpio_26, \
+output gpio_27, \
+output gpio_28, \
+output gpio_29, \
+output gpio_30, \
+output gpio_31, \
+
+`define OUTPUT_EXPR {gpio_0, gpio_1, gpio_2, gpio_3, gpio_4, gpio_5, gpio_6, gpio_7, gpio_8, gpio_9, gpio_10, gpio_11, gpio_12, gpio_13, gpio_14, gpio_15, gpio_16, gpio_17, gpio_18, gpio_19, gpio_20, gpio_21, gpio_22, gpio_23, gpio_24, gpio_25, gpio_26, gpio_27, gpio_28, gpio_29, gpio_30, gpio_31}
+`define MEM_WIDTH 32
+`define MEM_DEPTH 256
